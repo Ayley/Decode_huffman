@@ -1,33 +1,24 @@
-import com.sun.security.auth.UnixNumericGroupPrincipal;
+package me.kleidukos.util;
 
-import java.util.*;
+import me.kleidukos.object.Node;
 
-public class Heap {
+import java.util.Stack;
 
-    private Stack<Node> nodes = new Stack<>();
+public class MinHeap {
 
+    private final Stack<Node> nodes = new Stack<>();
     private Node root;
-
-    public int size(){
-        return nodes.size();
-    }
-
-    public void swap(int i, int x){
-        var tmp = nodes.get(i);
-
-        nodes.set(i, nodes.get(x));
-        nodes.set(x, tmp);
-    }
 
     public void push(Node node){
         nodes.push(node);
         var childId = size() - 1;
 
         while (true){
-            int parentId = (int) Math.floor((childId - 1) >> 1);
+            var parentId = (childId - 1) / 2;
+
             if(parentId < 0) parentId = 0;
 
-            if(nodes.get(parentId).right(nodes.get(childId)))return;
+            if (nodes.get(parentId).right(nodes.get(childId))) return;
 
             swap(parentId, childId);
 
@@ -37,7 +28,7 @@ public class Heap {
         }
     }
 
-    public Node pop(){
+    public Node pop() {
         var node = nodes.get(0);
         var last = nodes.pop();
 
@@ -61,6 +52,17 @@ public class Heap {
         }
 
         return node;
+    }
+
+    public void swap(int i, int x){
+        var tmp = nodes.get(i);
+
+        nodes.set(i, nodes.get(x));
+        nodes.set(x, tmp);
+    }
+
+    public int size(){
+        return nodes.size();
     }
 
     public Node getRoot(){

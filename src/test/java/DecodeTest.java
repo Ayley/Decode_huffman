@@ -1,33 +1,24 @@
-import org.junit.Before;
 import org.junit.Test;
 
-import java.util.Arrays;
 import java.util.HexFormat;
-import java.util.List;
+import java.util.SortedMap;
 
-public class StructTest {
-
-    private Struct struct;
-    private Decoder decoder;
+public class DecodeTest {
 
     private String hex = "81 00 00 00 00 00 00 00 0B 00 00 00 06 00 00 00 2D 00 00 00 09 00 00 00 30 00 00 00 03 00 00 00 31 00 00 00 03 00 00 00 32 00 00 00 02 00 00 00 33 00 00 00 02 00 00 00 34 00 00 00 06 00 00 00 35 00 00 00 03 00 00 00 37 00 00 00 04 00 00 00 38 00 00 00 01 00 00 00 39 00 00 00 02 00 00 00 7C 00 00 00 85 00 00 00 11 00 00 00 29 00 00 00 D3 0C 78 90 FB 1D 0E 6E 4B 4C 35 DF 17 75 BD AA 90";
 
-    @Before
-    public void before(){
+    @Test
+    public void kleidukosDecode() throws Exception {
         var bytes = HexFormat.of().parseHex(hex.replace(" ", ""));
 
-        decoder = new Decoder(bytes);
+        System.out.println(me.kleidukos.HuffmanDecoder.decode(bytes));
     }
 
     @Test
-    public void testFreqs() throws Exception {
-        for (var s: decoder.getFrequencies()) {
-            System.out.println(s.character() + " : " + s.frequency());
-        }
+    public void lukeDecode(){
+        var bytes = HexFormat.of().parseHex(hex.replace(" ", ""));
+
+        System.out.println(HuffmanDecoder.decode(bytes));
     }
 
-    @Test
-    public void testTree() throws Exception {
-        System.out.println(decoder.unpackFile());
-    }
 }
