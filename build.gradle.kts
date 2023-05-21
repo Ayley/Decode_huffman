@@ -46,7 +46,7 @@ publishing {
                     password = System.getenv("NEXUS_PASSWORD")
                 }
             }
-
+            name = "EldoNexus"
             setUrl(publishData.getRepository())
         }
     }
