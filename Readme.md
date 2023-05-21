@@ -3,7 +3,7 @@
 [![Releases](https://img.shields.io/nexus/maven-releases/me.kleidukos/huffman-decoder?label=Release&logo=Release&server=https%3A%2F%2Feldonexus.de&style=for-the-badge)][release]
 
 [publish]: https://github.com/ayley/decode_huffman/actions/workflows/publish_gradle.yml
-[release]: https://eldonexus.de/#browse/browse:maven-releases:me%2Fkleidukos%2Fhuffman-decoder
+[release]: https://eldonexus.de/#browse/browse:maven-public:me%2Fkleidukos%2Fhuffman-decoder
 
 # Dependency
 ```kotlin
