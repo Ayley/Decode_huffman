@@ -3,8 +3,8 @@ plugins {
 }
 
 group = "me.kleidukos"
+
 version = "1.0.0"
-java.sourceCompatibility = JavaVersion.VERSION_17
 
 repositories {
     mavenCentral()
@@ -12,16 +12,13 @@ repositories {
 }
 
 dependencies {
-
+    //This needs the decoder from
     testImplementation("org.thshsh:struct:2.1.0")
 
-    testImplementation(platform("org.junit:junit-bom:5.9.3"))
+    testImplementation(platform("org.junit:junit-bom:5.9.1"))
     testImplementation("org.junit.jupiter:junit-jupiter")
 }
 
 tasks.test {
     useJUnitPlatform()
-    testLogging {
-        events("passed", "skipped", "failed")
-    }
 }
