@@ -9,12 +9,12 @@ import org.apache.commons.codec.binary.Hex;
 import org.thshsh.struct.Struct;
 
 
-//////////////////////////////////////////
-//
-//  This is not my code
-//  https://haste.arsha.io/p/TFOOzh.java
-//
-//////////////////////////////////////////
+////////////////////////////////////////////
+//                                        //
+//  This is not my code                   //
+//  https://haste.arsha.io/p/TFOOzh.java  //
+//                                        //
+////////////////////////////////////////////
 public class HuffmanDecoder {
 
     public static void main(String[] args) {
