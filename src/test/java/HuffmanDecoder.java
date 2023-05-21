@@ -124,7 +124,7 @@ public class HuffmanDecoder {
 //#region
 // Decoding helper classes
 class Unpacked {
-    private List<Object> result;
+    private final List<Object> result;
     public byte[] resized;
 
     public Unpacked(List<Object> result, byte[] resized) {
@@ -148,8 +148,8 @@ class Frequencies {
 }
 
 class BitList {
-    private int numBits;
-    private BitSet bits;
+    private final int numBits;
+    private final BitSet bits;
 
     public BitList(int numBits, byte[] buffer) {
         this.numBits = numBits;

@@ -1,9 +1,8 @@
-rootProject.name = "DecodeHuffman"
+rootProject.name = "Huffman-Decoder"
 
 pluginManagement{
     repositories{
         gradlePluginPortal()
-        // Use eldo nexus for gradle plugins
         maven("https://eldonexus.de/repository/maven-public/")
     }
 }

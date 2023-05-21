@@ -35,12 +35,6 @@ publishing {
     repositories {
         maven {
             authentication {
-
-            }
-        }
-
-        maven {
-            authentication {
                 credentials(PasswordCredentials::class) {
                     username = System.getenv("NEXUS_USERNAME")
                     password = System.getenv("NEXUS_PASSWORD")
